@@ -6,12 +6,9 @@ import { IUser } from "../models/IUser"
 let date = new Date()
 const currentDate = formatDate(date)
 
-const API_URL =
-    process.env.REACT_APP_API_URL ||
-    'http://localhost:5000/';
-
 export const todoAPI = createApi({
     reducerPath: "todoAPI",
+    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/';
 
     baseQuery: fetchBaseQuery({
         baseUrl: API_URL
