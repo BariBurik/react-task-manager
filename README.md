@@ -1,4 +1,5 @@
-Вот так, отдельным изолированным блоком, как раньше:
+# Live Demo:
+https://task-manager-front-ft6d.onrender.com/todo/completed
 
 # React Task Manager
 
@@ -114,3 +115,7 @@ This authentication approach is not intended for production use.
 ## About
 
 Personal frontend project demonstrating React and TypeScript development, state management with Redux Toolkit, API integration with RTK Query, routing, form handling, and task CRUD operations.
+
+## Preview
+<img width="1867" height="951" alt="image" src="https://github.com/user-attachments/assets/427e872d-67fb-4b2d-a078-91a061480f4d" />
+
