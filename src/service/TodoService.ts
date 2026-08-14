@@ -8,7 +8,13 @@ const currentDate = formatDate(date)
 
 export const todoAPI = createApi({
     reducerPath: "todoAPI",
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:5000/'}),
+    const API_URL =
+    process.env.REACT_APP_API_URL ||
+    'http://localhost:5000/';
+
+    baseQuery: fetchBaseQuery({
+        baseUrl: API_URL
+    }),
     tagTypes: ['Todo'],
     endpoints: (build) => ({
         fetchAllTodos: build.query<ITodo[], IUser>({
