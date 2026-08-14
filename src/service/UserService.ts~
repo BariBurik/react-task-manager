@@ -5,10 +5,10 @@ import { IUser } from "../models/IUser";
 const API_URL =
     process.env.REACT_APP_API_URL ||
     'http://localhost:5000/';
-
+    
 export const userAPI = createApi({
     reducerPath: "userAPI",
-    baseQuery: fetchBaseQuery({baseUrl: API_URL}),
+    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:5000/'}),
     tagTypes: ['User'],
     endpoints: (build) => ({
         fetchAllUser: build.query<IUser[], number>({
