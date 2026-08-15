@@ -43,7 +43,7 @@ const LoginForm: FC = () => {
                     return error
                 }
             } else {
-                alert("Пользователь с таким именем уже существует")
+                alert("A user with this name already exists")
             }
         }
     }
@@ -74,7 +74,7 @@ const LoginForm: FC = () => {
                 console.log(newUserId)
                 localStorage.setItem('id', `${newUserId}`)
             } else {
-                alert("Не верные логин или пароль")
+                alert("Not correct login or password")
             }
         } else if (error) {
             return error
@@ -89,48 +89,48 @@ const LoginForm: FC = () => {
         <Form
         onFinish={loginUser}>
             <Form.Item
-                label="Имя пользователя"
+                label="Username"
                 name="username"
-                rules={[rules.required("Пожалуйста введите имя пользователя")]}
+                rules={[rules.required("Please enter username")]}
             >
                 <Input value={username} onChange={(e) => setUsername(e.target.value)}/>
             </Form.Item>
             <Form.Item
-                label="Пароль"
+                label="Password"
                 name="password"
-                rules={[rules.required("Пожалуйста введите пароль")]}
+                rules={[rules.required("Please enter password")]}
             >
                 <Input value={pass} onChange={(e) => setPass(e.target.value)}/>
             </Form.Item>
             <Form.Item wrapperCol={{offset: 5, span: 16}}>
-                <p>Нет аккаунтa? <Link onClick={() => setIsLogining(false)} to={REGISTER_ROUTE}>Зарегистрируйтесь</Link></p>
+                <p>You not have account yet? <Link onClick={() => setIsLogining(false)} to={REGISTER_ROUTE}>Sign up</Link></p>
             </Form.Item>
             <Form.Item wrapperCol={{offset: 9, span: 16}}>
-                <Button type="primary" htmlType="submit">Войти</Button>
+                <Button type="primary" htmlType="submit">Sign in</Button>
             </Form.Item>
         </Form>
         :
         <Form
         onFinish={registerationUser}>
             <Form.Item
-                label="Имя пользователя"
+                label="Username"
                 name="username"
-                rules={[rules.required("Пожалуйста введите имя пользователя")]}
+                rules={[rules.required("Please enter username")]}
             >
                 <Input value={username} onChange={(e) => setUsername(e.target.value)}/>
             </Form.Item>
             <Form.Item
-                label="Пароль"
+                label="Password"
                 name="password"
-                rules={[rules.required("Пожалуйста введите пароль")]}
+                rules={[rules.required("Please enter password")]}
             >
                 <Input value={pass} onChange={(e) => setPass(e.target.value)}/>
             </Form.Item>
             <Form.Item wrapperCol={{offset: 7, span: 16}}>
-                <p>Есть аккаунт? <Link onClick={() => setIsLogining(true)} to={LOGIN_ROUTE}>Войдите</Link></p>
+                <p>Already have an account? <Link onClick={() => setIsLogining(true)} to={LOGIN_ROUTE}>Sign in</Link></p>
             </Form.Item>
             <Form.Item wrapperCol={{offset: 6, span: 16}}>
-                <Button type="primary" htmlType="submit">Зарегистрироваться</Button>
+                <Button type="primary" htmlType="submit">Sign up</Button>
             </Form.Item>
         </Form>
     )

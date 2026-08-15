@@ -51,12 +51,12 @@ const TodoItem: FC<TodoItemProps> = ({ todo, update}) => {
             </div>
             <DeleteOutlined className="todo__delete" onClick={deleteThisTodo} />
             <Modal
-                title="Создать задачу"
+                title="Create to do"
                 open={modalVisibale}
                 footer={null}
                 onCancel={() => setModalVisibale(false)}
             > 
-                <TodoModal todoAction={updateOldTodo} whichAction="Изменить"/>
+                <TodoModal todoAction={updateOldTodo} whichAction="Change"/>
             </Modal>
         </div>
     );

@@ -35,16 +35,16 @@ const TodoList: FC<TodoListProps> = ({ filtredTodos, updateTodoInList}) => {
                 <div className="demo-logo-vertical" />
                 <Menu theme="dark" mode="inline">
                     <MenuItem>
-                        <Link to={OVERDUE_TODOES_ROUTE}>Просроченные</Link>
+                        <Link to={OVERDUE_TODOES_ROUTE}>Overdue</Link>
                     </MenuItem>
                     <MenuItem>
-                        <Link to={TODAY_TODOES_ROUTE}>Сегодняшние</Link>
+                        <Link to={TODAY_TODOES_ROUTE}>Today</Link>
                     </MenuItem>
                     <MenuItem>
-                        <Link to={TODOES_ROUTE}>Все</Link>
+                        <Link to={TODOES_ROUTE}>All</Link>
                     </MenuItem>
                     <MenuItem>
-                        <Link to={COMPLETED_TODOES_ROUTE}>Выполненные</Link>
+                        <Link to={COMPLETED_TODOES_ROUTE}>Completed</Link>
                     </MenuItem>
                 </Menu>
             </Sider>
@@ -54,14 +54,14 @@ const TodoList: FC<TodoListProps> = ({ filtredTodos, updateTodoInList}) => {
                             <TodoItem key={index} update={updateTodoInList} todo={todo}/>
                         )
                     }
-                    <Button onClick={() => setModalVisibale(true)} type="primary">Создать новый todo</Button>
+                    <Button onClick={() => setModalVisibale(true)} type="primary">Create new to do</Button>
                     <Modal
-                        title="Создать задачу"
+                        title="Create to do"
                         open={modalVisibale}
                         footer={null}
                         onCancel={() => setModalVisibale(false)}
                     > 
-                        <TodoModal todoAction={addNewTodo} whichAction="Создать"/>
+                        <TodoModal todoAction={addNewTodo} whichAction="Create"/>
                     </Modal>
                 </div>
         </Layout>
