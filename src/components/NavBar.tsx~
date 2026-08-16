@@ -39,7 +39,7 @@ const NavBar: FC = () => {
                         <Menu.Item 
                         onClick={() => navigate(LOGIN_ROUTE)} 
                         >
-                            Login
+                            Логин
                         </Menu.Item>
                     </Menu>
                 }

@@ -39,7 +39,7 @@ const TodoModal: FC<TodoModalProps> = ({todoAction, whichAction}) => {
     return ( 
         <Form onFinish={todoNewAction}>
             <Form.Item
-                label="Task title"
+                label="To do title"
                 name="title"
                 rules={[rules.required()]}
             >
@@ -50,7 +50,7 @@ const TodoModal: FC<TodoModalProps> = ({todoAction, whichAction}) => {
             <Form.Item
                 label="Deadline"
                 name="date"
-                rules={[rules.required(), rules.isDateAfter("You can't create already overdue task")]}
+                rules={[rules.required(), rules.isDateAfter("You can't create already overdue to do")]}
             >
                 <DatePicker  
                     onChange={(date) => selectDate(date)}
